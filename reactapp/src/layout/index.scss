@@ -1,0 +1,14 @@
+.layout {
+  height: 100vh;
+
+  :global {
+    .title {
+      height: 28px;
+      line-height: 28px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 16px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
