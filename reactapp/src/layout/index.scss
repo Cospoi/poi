@@ -1,6 +1,5 @@
 .layout {
   height: 100vh;
-
   :global {
     .title {
       height: 28px;
@@ -9,6 +8,9 @@
       margin: 16px;
       text-align: center;
       color: #fff;
+    }
+    .poi-layout-background{
+      background: #fff;
     }
   }
 }
