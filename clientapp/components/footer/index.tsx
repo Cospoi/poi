@@ -1,5 +1,3 @@
-const index = () => {
+export default () => {
   return <footer></footer>;
 };
-
-export default index;

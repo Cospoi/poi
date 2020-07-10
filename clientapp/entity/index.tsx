@@ -1,5 +1,5 @@
 //theme
-export interface InitialState {
+export interface IInitialState {
   theme: ITheme;
 }
 export interface ITheme {
@@ -16,4 +16,14 @@ export interface IMenuData {
 }
 export interface IMenuProps {
   data: IMenuData[];
+}
+//article
+export interface IArticle {
+  id: number;
+  title: string; 
+  summer: string;
+  content?:string;
+  viewCount: number;
+  createDate: string;
+  fontCount: number;
 }

@@ -3,7 +3,7 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { InitialState } from "../entity";
+import { IInitialState } from "../entity";
 
 let store;
 
@@ -20,7 +20,6 @@ type THEME_DEFAULT = typeof THEME_DEFAULT;
 const THEME_DARK = "THEME_DARK";
 type THEME_DARK = typeof THEME_DARK;
 
-//ACTIONS
 interface THEME_DEFAULTAction {
   type: THEME_DEFAULT;
 }
@@ -32,9 +31,9 @@ type actionTypes = THEME_DEFAULTAction | THEME_DARKAction;
 
 // REDUCERS
 export const reducer = (
-  state: InitialState = InitialState,
+  state: IInitialState = InitialState,
   action: actionTypes
-): InitialState => {
+): IInitialState => {
   switch (action.type) {
     case THEME_DEFAULT:
       return {
@@ -57,6 +56,14 @@ export const reducer = (
       return state;
   }
 };
+//ACTIONS
+export const themeDefault = () => {
+  return { type: THEME_DEFAULT };
+};
+export const themeDark = () => {
+  return { type: THEME_DARK };
+};
+
 
 const persistConfig = {
   key: "poi",

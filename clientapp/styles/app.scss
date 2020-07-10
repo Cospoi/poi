@@ -1,10 +1,93 @@
-*{padding:0;margin:0;}
-body{font-family:'Microsoft YaHei',Arial,sans-serif;font-size:16px;text-align:center;background:#FFF;color:#000;}
-div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:none;}
-img,input{border:none;vertical-align:middle;}
-html{overflow-y:scroll;}
-ul,ol{list-style-type:none;}
-input{outline:none;border:none;box-shadow:none;}
-button{border:none;cursor:pointer;font-size:16px;background-color:transparent;}
-a:link,a:visited{text-decoration:none;color:#333;}
-a:hover,a:active{text-decoration:none;color:#f60;}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  &::-webkit-scrollbar {
+    width: 5px; 
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #ededed;
+      border-radius: 10px;
+    }
+  }
+  div,
+  dl,
+  dt,
+  dd,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  img,
+  ol,
+  ul,
+  li,
+  table,
+  th,
+  td,
+  p,
+  span,
+  a {
+    border: none;
+  }
+  img,
+  input {
+    border: none;
+    vertical-align: middle;
+  }
+  html {
+    overflow-y: scroll;
+  }
+  ul,
+  ol {
+    list-style-type: none;
+  }
+  input {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+  }
+  a {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: #333;
+    }
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: #f60;
+    }
+  }
+}

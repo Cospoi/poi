@@ -1,0 +1,22 @@
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  margin-top: 10px;
+  min-height: 1000px;
+  display: flex;
+  justify-content: space-between;
+  .leftcontainer {
+    width: 69%;
+    min-height: 1000px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .rightcontainer {
+    width: 29%;
+    background-color: beige;
+    min-height: 1000px;
+  }
+}

@@ -6,7 +6,10 @@
 .poi_header {
   height: 50px;
   background-color: #777;
-
+  position: fixed;
+  width: 100%;
+  top:0;
+  z-index: 100;
   .poi_nav {
     display: flex;
     width: 1170px;
@@ -32,6 +35,7 @@
         visibility: hidden;
         > li {
           line-height: 40px;
+          background-color: white;
         }
       }
       .act {

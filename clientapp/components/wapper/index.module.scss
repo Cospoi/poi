@@ -1,0 +1,14 @@
+.poi_wapper {
+  height: 800px;
+  width: 100%;
+  background-color: yellow;
+  position: relative;
+  .poi_syno {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 48%;
+    margin: 0 auto;
+  }
+}

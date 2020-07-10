@@ -3,8 +3,8 @@ import css from "./index.module.scss";
 import { Switch } from "../custom";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { IMenuProps, IMenuData } from "../../entity";
-import { changeThemeDefault, changeThemeDark } from "../../store/store";
+import { IMenuProps, IMenuData, IInitialState } from "../../entity";
+import { themeDefault, themeDark } from "../../store/store";
 
 const menuData = [
   {
@@ -72,17 +72,17 @@ const menuData = [
   },
 ];
 
-const index = () => {
-  const theme = useSelector((state) => state.theme);
+export default () => {
+  const theme = useSelector((state: IInitialState) => state.theme);
   const dispatch = useDispatch();
 
   let changeThemeHandle = () => {
-    switch (theme) {
+    switch (theme.id) {
       case 0:
-        dispatch(changeThemeDark());
+        dispatch(themeDark());
         return;
       case 1:
-        dispatch(changeThemeDefault());
+        dispatch(themeDefault());
         return;
     }
   };
@@ -94,7 +94,7 @@ const index = () => {
         <div className={css.poi_navright}>
           <a href="#!">统计</a>
           <Switch
-            checked={theme === 1 ? true : false}
+            checked={theme.id === 1 ? true : false}
             onClick={changeThemeHandle}
           />
         </div>
@@ -141,5 +141,3 @@ const MenuItem = (props: IMenuData) => {
     </li>
   );
 };
-
-export default index;
