@@ -27,3 +27,7 @@ export interface IArticle {
   createDate: string;
   fontCount: number;
 }
+export interface IArticleList{
+  totalCount:number,
+  items:IArticle[]
+}

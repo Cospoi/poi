@@ -78,6 +78,10 @@ body {
     font-size: 16px;
     background-color: transparent;
   }
+  summary{
+    text-align: justify;
+    font-size: 14px;
+  }
   a {
     &:link,
     &:visited {
